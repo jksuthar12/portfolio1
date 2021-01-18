@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body  onload="channge()" onscroll="channge()">
+           <nav >
+            <div class="dropdown">
+             <div id="menu">
+             <div></div>
+             <div></div>
+             <div></div>
+             </div>
+             <div class="dropdown-content">
+               <ul>
+                   <li id="h" onclick="fo('main')">Home</li>
+                   <li id="e" onclick="fo('education')">Education</li>
+                   <li id="s" onclick="fo('skills')">Skills</li>
+                   <li id="p" onclick="fo('projects')">Projects</li>
+                   <li id="c" onclick="fo('contact')">Contact</li>
+               </ul>
+             </div>
+            </div>
+          <div id="haad">
+            <img id="img" src="other/profile.png"/>
+            <h3 id="l">Jitendra Suthar</h3></div>
+           </nav>
+           <div class="main"  id="main">
+               <div class="imgg">
+                   <img  id="imgi" src="other/profile.png"/>
+                   <div class="about" >
+                        <h3>About Me</h3>
+                        <p>Hello , I am jitendra suthar. Currently i am persuing my B.Tech Degree from NIT Bhopal.
+                           i am Currently in my pre-final year.i am have some experience in android and web development.
+                           i also do competitive programming. That's all about me and <br><strong>Thank you for visiting my Portfolio.</strong>
+                        </p>
+                   </div>
+                </div>
+                   <div class="education" id="education">
+                       <h3 style="letter-spacing: 3px;">Education</h3>
+                       <div class="educ">
+                      <div class="edu">
+                         <p><strong>Bachelor of Technology (B.Tech), Computer Science & Engineering</strong>
+                          <br><br>NIT BHOPAL 2018 - 2022<br>CGPA : 6.54
+                        </p>
+                      </div>
+                      <div class="edu">
+                        <p><strong>XII( Senior Secondary), Science</strong>
+                          <br> <br> RBSE BOARD 2016
+                        <br>PERCENTAGE : 89.20
+                        </p>
+                     </div>
+                     <div class="edu">
+                        <p><strong>X(Secondary)</strong>
+                         <br> <br>RBSE BOARD 2014
+                         <br> PERCENTAGE : 83.00
+                        </p>
+                     </div>
+                     </div>
+                   </div>
+                   <div class="projects" id="projects">
+                            <h3 style="letter-spacing: 3px;">Projects</h3>
+                        <div class="project">
+                          <p><Strong>Papersort Application</Strong></p>
+                          <p>A full-fledge android application that allow college student to
+                             download previous year papers and relevant study materials.</p>
+                          <p style="text-align: left;"><strong>Skills used : </strong> Android Firebase</p> 
+                          <button onclick="location.href='./papersort.html';"  >VIEW PROJECT </button>
+                        </div>
+                        <div class="project">
+                          <p><Strong>MyBasta Application</Strong></p>
+                          <p>In this android application professor can give assignment and notes to student.students submit their assignment. and professors get the
+                             submitted assignment of students and can give the marks.</p>
+                          <p style="text-align: left;"><strong>Skills used : </strong> Android PHP SQL</p> 
+                          <button  onclick="location.href='./MyBasta.html';" >VIEW PROJECT</button>
+                        </div>
+                        <div class="project">
+                          <p><Strong>TimeTable Application</Strong></p>
+                          <p>An android application from any college student can see their time table and can check which class is going on in other class room.</p>
+                          <p style="text-align: left;"><strong>Skills used : </strong> Android PHP SQL</p> 
+                          <button  onclick="location.href='./TimeTable.html';" >VIEW PROJECT</button>
+                        </div>
+                   </div>
+             <div class="contact" id="contact">
+               <div>
+                <h3 style="letter-spacing: 3px;">Contact</h3>
+                    <div class="email">
+                         <input type="text" placeholder="Name"><br>
+                         <input type="text" placeholder="Email"><br>
+                         <textarea type="text" placeholder="Your message...." ></textarea>
+                         <button id="send" >SEND</button>
+                    </div>
+                    <div class="social">
+                      <a href="#" target="__blank" class="fa fa-skype fa-2x"></a>
+                      <a href="https://www.instagram.com/__j_k____/" target="__blank" class="fa fa-instagram fa-2x"></a>
+                      <a href="https://www.linkedin.com/in/jitendra-suthar-b82044199" target="__blank" class="fa fa-linkedin fa-2x"></a>
+                      <a href="https://github.com/jksuthar12" target="__blank" class="fa fa-github fa-2x"></a>
+                    </div></div>
+             </div>
+           </div>
+           <script  src="index.js"></script>
+    </body>
+</html>
