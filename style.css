@@ -1,302 +1,373 @@
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-   overflow-y: scroll;
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 }
-nav{ 
-      width: 100%;
-      height: auto;
-      background-color: white;
-    text-align: center;
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     position: fixed;
-     z-index: 100;
-   top: 0%;
-   padding-top: 5px;
-   padding-bottom: 5px;
+nav {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: fixed;
+  z-index: 100;
+  top: 0%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-.dropdown-content{
-    float: left;
+.dropdown-content {
+  float: left;
 }
-.dropdown-content ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+.dropdown-content ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
-.dropdown-content ul li{
-    float: left;
-    padding: 10px 20px;
-    font-weight: 500;
-    cursor: pointer;
+.dropdown-content ul li {
+  float: left;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
 }
-li:hover{
-    color: blue;
+li:hover {
+  color: blue;
 }
-.main{
-    width: 100%;
-    height: auto;
-    margin-top: 30px;
-    text-align: center;
+.main {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  text-align: center;
 }
-.imgg{
-    background: rgba(76, 175, 80, 0.3) ;
-    height: auto;
-    
+.imgg {
+  background: rgba(76, 175, 80, 0.3);
+  height: auto;
 }
-.about{
-    padding-bottom: 30px;
-    animation: fade 3s linear forwards;
-
+.about {
+  padding-bottom: 30px;
+  animation: fade 3s linear forwards;
 }
-#imgi{
-    border-radius: 50%;
-    width: 200px;
-    border: 7px blueviolet solid;
-    height: 200px;
-    object-fit: fill;
- margin-top: 40px;
- margin-bottom: 20px;
-    animation: fade 3s linear forwards;
- box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#imgi {
+  border-radius: 50%;
+  width: 200px;
+  border: 7px blueviolet solid;
+  height: 200px;
+  object-fit: fill;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  animation: fade 3s linear forwards;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.about p{
-    width: 400px;
-    letter-spacing: 3px;
-   margin: 0 auto;
+.about p {
+  width: 400px;
+  letter-spacing: 3px;
+  margin: 0 auto;
 }
-.education{
-    width: 100%;
-    padding-top: 30px;
-   padding-bottom: 30px;
-   animation: fade 3s linear forwards;
+.education {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  animation: fade 3s linear forwards;
 }
-.educ{
+.educ {
   width: 100%;
   height: auto;
   text-align: center;
 }
-.edu{
-   display: inline-block;
-   width: 28%;
-   cursor: pointer;
-  
+.edu {
+  display: inline-block;
+  width: 28%;
+  cursor: pointer;
 }
-.edu p{
-    letter-spacing: 1px;
-    text-align: center;
+.edu p {
+  letter-spacing: 1px;
+  text-align: center;
 }
-#haad{
- 
- width: fit-content;
- margin: 0 auto;
-
+#haad {
+  width: fit-content;
+  margin: 0 auto;
 }
-#img{
-    border-radius: 50%;
-    width: 40px;
-    border: 3px blueviolet solid;
-    height: 40px;
-    display: none;
-    object-fit: fill;
- box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#img {
+  border-radius: 50%;
+  width: 40px;
+  border: 3px blueviolet solid;
+  height: 40px;
+  display: none;
+  object-fit: fill;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#l{
- text-align: center;
- margin: 0;
- margin: 10px;
+#resume {
+  text-decoration: none;
+  padding: 5px 5px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: blue;
+  background-color: white;
+  border: 2px blue solid;
+  border-radius: 5px;
+  transition: color 500ms, background-color 500ms;
 }
-#l:hover{
-    color: blue;
-    cursor: pointer;
+#resume:hover {
+  background-color: blue;
+  color: white;
 }
-.projects{
-    width: 100%;
-    padding-top: 30px;
+#l {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
 }
-.project{
-    width:70%;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 0 8px 0 #ddd;
-    border-radius: 5px;
-    margin-bottom: 30px;
+#l:hover {
+  color: blue;
+  cursor: pointer;
 }
-.project:hover{
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.projects {
+  width: 100%;
+  padding-top: 30px;
+}
+.project {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 8px 0 #ddd;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.project:hover {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 button {
-    border: none;
-    outline: none;
-    background: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-   color: blue;
-   font-weight: bold;
-    border: 2px solid blue;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: blue;
+  font-weight: bold;
+  border: 2px solid blue;
 }
-button:hover{
-    background-color: blue;
-    color: white;
+button:hover {
+  background-color: blue;
+  color: white;
 }
-.contact{
-    height: 500px;
-    width: 100%;
-   
-    padding-top: 30px;
-    background-color: #ddd;
+.contact {
+  height: 500px;
+  width: 100%;
+
+  padding-top: 30px;
+  background-color: #ddd;
 }
-.email{
-    width: 50%;
-    padding: 40px;
-    float: left;
+.email {
+  width: 50%;
+  padding: 40px;
+  float: left;
 }
-.social{
-    padding: 40px;
-    text-align: center;
-   margin-top: 20px;
+.social {
+  padding: 40px;
+  text-align: center;
+  margin-top: 20px;
 }
-input{
-    outline-color: blue;
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px 10px;
+input {
+  outline-color: blue;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 10px;
 }
-textarea{
-    height: 100px;
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px 10px;
-    resize: vertical;
-    outline-color: blue;
+textarea {
+  height: 100px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 10px;
+  resize: vertical;
+  outline-color: blue;
 }
-#send{
-   
-    padding: 10px 30px;
-   margin-top: 20px;
-   float: left;
+#send {
+  padding: 10px 30px;
+  margin-top: 20px;
+  float: left;
 }
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    margin: 10px;
-  }
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-  .fa:hover {
-    opacity: 0.7;
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 10px;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa:hover {
+  opacity: 0.7;
 }
 .fa-instagram {
-    background: #125688;
-    color: white;
-  }
-  .fa-skype {
-    background: #00aff0;
-    color: white;
-  }   
-  .fa-github{
-      background-color: black;
-      color: white;
-  }   
+  background: #125688;
+  color: white;
+}
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+.fa-github {
+  background-color: black;
+  color: white;
+}
+.faa {
+  margin: 0px;
+  padding: 0px;
+}
 @keyframes fade {
-   from{
-       opacity: 0;
-   }
-   to{
-       opacity: 1;
-     
-   }
+  from {
+    opacity: 0;
   }
-  @media screen and (max-width: 680px) {
-   .edu{
-       width: 100%;
-   }
-   .dropdown-content ul{
+  to {
+    opacity: 1;
+  }
+}
+.cc{
+  
+}
+.download{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: blue;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.flot{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.bu{
+    position: fixed;
+    background-color: blue;
+    right: 2%;
+    bottom: 2%;
+    text-align: center;
+    cursor: pointer;
+    visibility: hidden;
+    border-radius: 150px;
+    z-index: 100;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.bu a{
+    padding: 15px 15px;
+    color: white;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+   
+    
+}
+@media screen and (max-width:590px){
+    #resume{
+      display: none;
+  }
+  .download{
+    display: block;
+  }
+}
+@media screen and (max-width: 1077px) {
+  .edu {
+    width: 100%;
+  }
+  
+  .dropdown-content ul {
     width: 100%;
     padding: 0;
     cursor: pointer;
     z-index: 1;
     list-style-type: none;
-}
-.dropdown{
+  }
+  .dropdown {
     float: left;
-}
-#menu{
+  }
+  #menu {
     margin-left: 20px;
     margin-top: 10px;
     display: inline-block;
     cursor: pointer;
-}
-#menu div{
+  }
+  #menu div {
     width: 25px;
     height: 3px;
     overflow: hidden;
     box-sizing: border-box;
     background-color: black;
     margin: 3px 0;
-  
-}
-.dropdown-content{
+  }
+  .dropdown-content {
     position: absolute;
     width: 100%;
-     display: none;
-     z-index: 1;
-     margin-top: 5px;
+    display: none;
+    z-index: 1;
+    margin-top: 5px;
     background-color: white;
     -webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
-}
-.fa{
+  }
+  .fa {
     margin: 2px;
-}
-.contact{
+  }
+  .contact {
     height: auto;
-}
-.dropdown:hover .dropdown-content{
+  }
+  .dropdown:hover .dropdown-content {
     display: block;
-   animation: growdown 300ms ease-in-out forwards;
-        transform-origin: top center;
-}
-li{
+    animation: growdown 300ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+  li {
     width: 100%;
     padding: 10px 0;
-}
-li:hover{
+  }
+  li:hover {
     background-color: #ddd;
-}
-.about{
+  }
+  .about {
     width: 80%;
     margin: 0 auto;
-}
-.about p{
-    width: 100%;
-}
-.email{
-    width: 70%;
-}
-@keyframes growdown {
-    0% {
-        transform: scaleY(0)
-      }
-      80% {
-        transform: scaleY(1.1)
-      }
-      100% {
-        transform: scaleY(1)
-      }
-   }
-
   }
+  .about p {
+    width: 100%;
+  }
+  .email {
+    width: 70%;
+  }
+
+  @keyframes growdown {
+    0% {
+      transform: scaleY(0);
+    }
+    80% {
+      transform: scaleY(1.1);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+}
