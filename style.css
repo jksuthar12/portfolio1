@@ -1,18 +1,217 @@
 html {
   scroll-behavior: smooth;
+  user-select: none;
 }
 body {
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
 }
+.first {
+  height: 100vh;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: url('background.jpg');
+  background-size: cover;
+  position: relative;
+  transition: all 2s ease;
+}
+
+#social {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+
+}
+#social ul {
+  display: flex;
+  margin: 0px;
+}
+#social a {
+   all: none;
+   padding: 0;
+   background-color: none;
+   width: 0;
+   margin-left: 60px;
+   margin-top: 0px;
+  font-size: x-large;
+  transition: color 0.5s;
+}
+#social a:hover {
+  color: black;
+}
+#name {
+  text-align: center;
+  color: white;
+  font-weight: 100;
+  margin: 0px;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  top: 20px;
+}
+.ta {
+  height: 0vh;
+  
+}
+#second {
+  
+  transition: all 2s;
+}
+.fprojects {
+  position: absolute;
+  top: 50%;
+  width: 300px;
+  transform: translateY(-50%);
+  flex-wrap: wrap;
+  align-items: center;
+  display: none;
+}
+.fproject {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  margin-bottom: 10px;
+   transform: all 0.5s;
+}
+.fprojectanimation {
+
+  animation-name: fproject;
+  animation-duration: 0.5s;
+}
+@keyframes fproject {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 50px;
+  }
+}
+.fproject p{
+  height: 100%;
+  color: white;
+  margin-left: 10px;
+  font-size: 25px;
+}
+.details {
+  height: 200px;
+ top:  50%;
+ 
+ transform: translateY(-50%);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  animation-name: details;
+  animation-duration: 1s;
+  left: 50px;
+}
+#de {
+  width: 3px;
+  background-color: white;
+  animation-name: de;
+  height: 200px;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  position: relative;
+  animation-fill-mode: backwards;
+}
+#de::after {
+  
+  
+}
+.card {
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  display: flex;
+  align-items: center;
+}
+
+#card1 , #card2 {
+ backface-visibility: hidden;
+  box-sizing: border-box;
+}
+#card2 {
+  transform: rotateY(180deg);
+
+}
+.para{
+  margin: 0;
+  width: 100%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+#up {
+  width: 50px;
+  height: 60px;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  clip-path: polygon(50% 92%,100% 67%,100% 75%,50% 100%,0% 75%,0% 68%);
+  cursor: pointer;
+  background-color: white;
+  animation: up 1s alternate infinite;
+  
+}
+@keyframes goup {
+  from{
+    bottom: 0%;
+  }
+  to{
+    bottom: 100%;
+  }
+}
+@keyframes up {
+  from{
+    bottom: 20px;
+  }
+  to {
+   bottom: 10px;
+  }
+}
+@keyframes details {
+  from{
+     left: -200px;
+
+  }
+  to {
+left: 50px;
+  }
+}
+@keyframes de {
+  from {
+     height: 0px;
+ 
+  }
+  to {
+    height: 200px;
+ 
+  }
+}
+.details p {
+  height: 100%;
+  
+  color: white;
+  margin-left: 10px;
+  font-size: 25px;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 nav {
   width: 100%;
-  height: auto;
-  background-color: white;
+  height: 40px;
+  background-color: white ;
   text-align: center;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: fixed;
@@ -63,6 +262,32 @@ li:hover {
   animation: fade 3s linear forwards;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.heading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+.image {
+  border-radius: 50%;
+ 
+  
+  height: 0;
+  width: 0;
+  object-fit: fill;
+  margin-right: 5px;
+  transition: all 1s ;
+}
+
+.trans {
+ opacity: 1;
+ width: 35px;
+  height: 35px;
+  border: 3px blueviolet solid;
+}
+
 .about p {
   width: 400px;
   letter-spacing: 3px;
@@ -72,17 +297,40 @@ li:hover {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
+  box-sizing: border-box;
   animation: fade 3s linear forwards;
+}
+.colored {
+  font-size: 40px;
+}
+.skills {
+
+  position: absolute;
+  left: 20px;
+  bottom: 60px;
 }
 .educ {
   width: 100%;
   height: auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .edu {
-  display: inline-block;
-  width: 28%;
+  margin:  20px;
   cursor: pointer;
+  flex: 1;
+  min-height: 200px;
+  box-shadow: 0 0 8px 0 #ddd;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #23d5ab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .edu p {
   letter-spacing: 1px;
@@ -120,12 +368,7 @@ li:hover {
   background-color: blue;
   color: white;
 }
-#l {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 10px;
-}
+
 #l:hover {
   color: blue;
   cursor: pointer;
@@ -133,14 +376,74 @@ li:hover {
 .projects {
   width: 100%;
   padding-top: 30px;
+ 
+}
+.allproject {
+  display: flex;
+  justify-content: center;
 }
 .project {
-  width: 70%;
-  margin: 0 auto;
-  padding: 20px;
+  height: 350px;
+   flex: 1;
+  margin: 5px 20px;
+  position: relative;
   box-shadow: 0 0 8px 0 #ddd;
   border-radius: 5px;
   margin-bottom: 30px;
+}
+.phead p {
+  margin: 0;
+ font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ font-size: 25px;
+}
+.pcontent {
+  height: 70%;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.pbutton {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+#pbutton1:hover {
+  background-color: gold;
+  color: white;
+}
+#pbutton2:hover {
+  background-color: black;
+  color: white;
+}
+#pbutton3:hover {
+  background-color: royalblue;
+  color: white;
+}
+.pbutton button {
+  border: 1px #ddd solid;
+  padding: 10px 20px;
+  color: grey;
+  font-weight: 300;
+  transition: all 0.3s;
+}
+.pdetail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.pcontent p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.phead {
+  background-color: tomato;
+  color: white;
+  margin: 0;
+  padding-top: 20px;
+  box-sizing: border-box;
+  height: 30%;
+  border-radius: 5px 5px 0 0;
 }
 .project:hover {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -236,9 +539,7 @@ textarea {
     opacity: 1;
   }
 }
-.cc{
-  
-}
+
 .download{
     width: 50px;
     height: 50px;
@@ -261,6 +562,7 @@ textarea {
     transform: translate(-50%,-50%);
 
 }
+
 .bu{
     position: fixed;
     background-color: blue;
@@ -291,10 +593,10 @@ textarea {
   }
 }
 @media screen and (max-width: 1077px) {
-  .edu {
-    width: 100%;
-  }
   
+   .allproject {
+     display: block;
+   }
   .dropdown-content ul {
     width: 100%;
     padding: 0;
@@ -304,20 +606,44 @@ textarea {
   }
   .dropdown {
     float: left;
+   
+  }
+  .educ {
+    display: block;
+    box-sizing: border-box;
   }
   #menu {
+    
+    width: 25px;
+    height: 20px;
     margin-left: 20px;
     margin-top: 10px;
-    display: inline-block;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
   }
   #menu div {
-    width: 25px;
+    width: 100%;
     height: 3px;
-    overflow: hidden;
-    box-sizing: border-box;
     background-color: black;
-    margin: 3px 0;
+    transition: all 0.5s;
+  }
+  #firstline {
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform-origin: top left;
+  }
+  #thirdline {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+ transform-origin: bottom left;
+  }
+  #secondline {
+  
   }
   .dropdown-content {
     position: absolute;
@@ -329,6 +655,7 @@ textarea {
     -webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
+ 
   }
   .fa {
     margin: 2px;
@@ -336,11 +663,12 @@ textarea {
   .contact {
     height: auto;
   }
-  .dropdown:hover .dropdown-content {
+  .aaa {
     display: block;
     animation: growdown 300ms ease-in-out forwards;
     transform-origin: top center;
   }
+ 
   li {
     width: 100%;
     padding: 10px 0;
