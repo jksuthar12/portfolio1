@@ -11,30 +11,18 @@ function typewriter() {
 }
 }
 var dro = 0;
-function cross() {
-  var firstLine = document.getElementById('firstline');
-  var secondLine = document.getElementById('secondline');
-  var thirdLine = document.getElementById('thirdline');
-  firstLine.style.transform = 'rotate(45deg)';
-  thirdLine.style.transform = 'rotate(-45deg)';
-  secondLine.style.display = 'none';
-}
+
 function drop() {
-  var dropdown = document.getElementById('dropdown');
-  
+  const dropdown = document.getElementById('dropdown');
+  const secondLine = document.getElementById('secondline');
   if(dro == 0) {
   dropdown.classList.add('aaa');
-   cross();
+  secondLine.style.transform="translateX(-10px)";
   dro++;
   }
   else{
-    var firstLine = document.getElementById('firstline');
-    var secondLine = document.getElementById('secondline');
-    var thirdLine = document.getElementById('thirdline');
-    firstLine.style.transform = 'rotate(0deg)';
-    thirdLine.style.transform = 'rotate(0deg)';
-    secondLine.style.display = 'block';
     dropdown.classList.remove('aaa');
+    secondLine.style.transform="translateX(10px)";
     dro = 0;
   }
 }

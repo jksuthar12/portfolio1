@@ -2,8 +2,11 @@ html {
   scroll-behavior: smooth;
   user-select: none;
 }
+*{
+
+}
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -226,11 +229,13 @@ nav {
 .dropdown-content ul {
   margin: 0;
   padding: 0;
+  text-align: center;
   list-style-type: none;
 }
-.dropdown-content ul li {
+.dropdown-content li {
   float: left;
   padding: 10px 20px;
+  text-align: center;
   font-weight: 500;
   cursor: pointer;
 }
@@ -604,6 +609,9 @@ textarea {
     z-index: 1;
     list-style-type: none;
   }
+  .dropdown-content li {
+    padding: 10px 0;
+  }
   .dropdown {
     float: left;
    
@@ -613,36 +621,27 @@ textarea {
     box-sizing: border-box;
   }
   #menu {
-    
-    width: 25px;
-    height: 20px;
+    width: 30px;
     margin-left: 20px;
     margin-top: 10px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     position: relative;
+    pointer-events: none;
   }
   #menu div {
+    height: 2px;
     width: 100%;
-    height: 3px;
-    background-color: black;
-    transition: all 0.5s;
+    margin: 6px 0;
+    background-color: rgb(10, 8, 8);
   }
-  #firstline {
-   position: absolute;
-   top: 0;
-   left: 0;
-   transform-origin: top left;
+  #firstline, #thirdline {
+    transform-origin: left;
   }
-  #thirdline {
-   position: absolute;
-   bottom: 0;
-   left: 0;
- transform-origin: bottom left;
-  }
+  
   #secondline {
+   
+    transform: translateX(10px);
+    transition: transform 300ms ease-in;
   
   }
   .dropdown-content {
@@ -650,12 +649,12 @@ textarea {
     width: 100%;
     display: none;
     z-index: 1;
-    margin-top: 5px;
+    top: 100%;
     background-color: white;
     -webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
- 
+     
   }
   .fa {
     margin: 2px;
@@ -692,7 +691,7 @@ textarea {
       transform: scaleY(0);
     }
     80% {
-      transform: scaleY(1.1);
+      transform: scaleY(0.9);
     }
     100% {
       transform: scaleY(1);
