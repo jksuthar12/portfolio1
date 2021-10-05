@@ -1,27 +1,18 @@
 window.onkeydown = up;
 var i = 0;
 var text = "Jitendra Suthar";
-var speed = 50;
-function typewriter() {
-  if(i < text.length){
-  document.getElementById('name').innerHTML += text.charAt(i);
-  i++;
- setTimeout(typewriter, speed);
-
-}
-}
 var dro = 0;
 
 function drop() {
   const dropdown = document.getElementById('dropdown');
   const secondLine = document.getElementById('secondline');
   if(dro == 0) {
-  dropdown.classList.add('aaa');
+   dropdown.style.maxHeight = "1000px";
   secondLine.style.transform="translateX(-10px)";
   dro++;
   }
   else{
-    dropdown.classList.remove('aaa');
+    dropdown.style.maxHeight = "0";
     secondLine.style.transform="translateX(10px)";
     dro = 0;
   }
@@ -61,9 +52,17 @@ function up(e) {
  document.getElementById('second').style.display="block";
  document.getElementById('details').style.display="none";
 }
+function animationInEducation() {
+  const edu = document.querySelectorAll(".edu-content");
+  edu.forEach(ele=>{
+    const ob = ele.getBoundingClientRect();
+    if(ob.top < window.innerHeight) {
+      ele.classList.add("educationAnimation");
+    }
+  });
+}
 function channge() {
   var x = window.scrollY;
-   setTimeout(typewriter, 1000);
   // document.getElementById('l').innerHTML = x;
   var image = document.getElementById('image')
   if(x >= 210) {
@@ -75,6 +74,7 @@ function channge() {
     image.classList.add('trass');
 
   }
+  animationInEducation();
   if (x == 0) {
     document.getElementById('h').style.color = "blue";
     document.getElementById('e').style.color = "";
@@ -130,3 +130,30 @@ let show = () =>{
   }
  
 }
+const inp = document.querySelectorAll("input");
+const textarea = document.querySelector("textarea");
+textarea.addEventListener("focus", function(e){
+  this.nextElementSibling.style.width = "100%";
+});
+document.querySelector("#send").addEventListener("mouseover", function(e){
+  this.nextElementSibling.style.width = "100%";
+  console.log('enter');
+  
+});
+document.querySelector("#send").addEventListener("mouseleave", function(e){
+  this.nextElementSibling.style.width = "0%";
+  console.log('leave');
+  
+});
+textarea.addEventListener("focusout", function(e){
+  this.nextElementSibling.style.width = "0%";
+});
+inp.forEach(ele=>{
+ ele.addEventListener("focus", function(e){
+      this.nextElementSibling.style.width = "100%";
+});
+ ele.addEventListener("focusout", function(e){
+      this.nextElementSibling.style.width = "0%";
+});
+
+})

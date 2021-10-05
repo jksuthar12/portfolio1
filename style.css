@@ -2,9 +2,7 @@ html {
   scroll-behavior: smooth;
   user-select: none;
 }
-*{
 
-}
 body {
   font-family: sans-serif;
   margin: 0;
@@ -13,6 +11,7 @@ body {
   height: 100%;
   overflow-y: scroll;
 }
+
 .first {
   height: 100vh;
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -303,7 +302,6 @@ li:hover {
   padding-top: 30px;
   padding-bottom: 30px;
   box-sizing: border-box;
-  animation: fade 3s linear forwards;
 }
 .colored {
   font-size: 40px;
@@ -314,28 +312,16 @@ li:hover {
   left: 20px;
   bottom: 60px;
 }
-.educ {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-}
-.edu {
-  margin:  20px;
-  cursor: pointer;
-  flex: 1;
-  min-height: 200px;
+
+.edu-content {
+  height: max-content;
+  min-height: 150px;
   box-shadow: 0 0 8px 0 #ddd;
-  border-radius: 5px;
   color: white;
   padding: 10px;
+  border-radius: inherit;
   box-sizing: border-box;
-  background-color: #23d5ab;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: tomato;
 }
 .edu p {
   letter-spacing: 1px;
@@ -473,7 +459,7 @@ button:hover {
   width: 100%;
 
   padding-top: 30px;
-  background-color: #ddd;
+  background-color: #d3d3d3;
 }
 .email {
   width: 50%;
@@ -485,24 +471,75 @@ button:hover {
   text-align: center;
   margin-top: 20px;
 }
-input {
-  outline-color: blue;
-  width: 100%;
+.input {
+  position: relative;
   margin-top: 20px;
-  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  outline: none;
 }
 textarea {
   height: 100px;
-  width: 100%;
-  margin-top: 20px;
-  padding: 10px 10px;
   resize: vertical;
-  outline-color: blue;
+}
+input, textarea {
+  border: none;
+  width: 100%;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+input:focus {
+ outline: none;
+}
+.input-highlight {
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+  transition: width 300ms ease-in;
+}
+.submit-btn {
+  width: 200px;
+  height: 30px;
+  position: relative;
+  clear: both;
+  float: left;
+  display: inline-block;
+  margin-top: 10px;
+  
+}
+.submit-btn span{
+   position: absolute;
+   width: 0%;
+   height: 100%;
+   background-color: blue;
+   left: 0;
+   bottom: 0;
+   transition: all 0.5s ease;
+   z-index: 1;
 }
 #send {
-  padding: 10px 30px;
-  margin-top: 20px;
-  float: left;
+  height: 100%;
+  width: 100%;
+  color: blue;
+  padding: 0;
+  border-radius: 0;
+  border: 2px solid blue;
+  position: absolute;
+  left: 0;
+  letter-spacing: 2px;
+  z-index: 4;
+  bottom: 0;
+}
+#send:hover {
+  color: white;
+  background-color: transparent;
 }
 .fa {
   padding: 20px;
@@ -586,8 +623,97 @@ textarea {
     display: block;
     font-weight: bold;
     text-decoration: none;
-   
+}
+.edu {
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 700px) {
+
+  .projects {
+    clear: both;
+  }
+  .education {
+    height: auto;
+  }
+  .educ {
+    width: 90%;
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 1000px;
+   position: relative;
+   padding: 20px;
+  }
+  .educ::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    color: gold;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+   z-index: -1;
+  }
+  .educationAnimation {
+    animation: educationAnim 400ms forwards;
+  }
+  .edu-content {
+    transform: translateX(-20px);
+  }
+  
+  @keyframes educationAnim {
+    from {
+      
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+   .edu {
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+  }
+  .edu::before {
+    content: '';
+    background-color: grey;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    display: block;
+    z-index: 6;
+  }
+  .edu:hover::before {
+    background-color: tomato;
     
+  }
+  .edu:nth-child(odd) {
+     float: left;
+     clear: right;
+     transform: translate(-40px);
+     border-radius: 7px 0 7px 7px;
+  }
+  .edu:nth-child(odd)::before {
+    top: 0;
+   right: -40px;
+    transform: translate(50%, -50%);
+  }
+  .edu:nth-child(even) {
+   float: right;
+   clear: left;
+   transform: translate(40px);
+   border-radius: 0 7px 7px 7px;
+  }
+  .edu:nth-child(even)::before {
+   top: 0;
+   left: -40px;
+   transform: translate(-50%, -50%);
+  }
+  
 }
 @media screen and (max-width:590px){
     #resume{
@@ -597,7 +723,7 @@ textarea {
     display: block;
   }
 }
-@media screen and (max-width: 1077px) {
+@media screen and (max-width: 690px) {
   
    .allproject {
      display: block;
@@ -615,10 +741,13 @@ textarea {
   .dropdown {
     float: left;
    
+  } 
+  .edu {
+    margin: 20px;
   }
-  .educ {
-    display: block;
-    box-sizing: border-box;
+  .email {
+    float: none;
+    margin: auto;
   }
   #menu {
     width: 30px;
@@ -647,8 +776,10 @@ textarea {
   .dropdown-content {
     position: absolute;
     width: 100%;
-    display: none;
+    max-height: 0;
     z-index: 1;
+    transition: max-height 300ms ease-in;
+    overflow: hidden;
     top: 100%;
     background-color: white;
     -webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
@@ -662,12 +793,6 @@ textarea {
   .contact {
     height: auto;
   }
-  .aaa {
-    display: block;
-    animation: growdown 300ms ease-in-out forwards;
-    transform-origin: top center;
-  }
- 
   li {
     width: 100%;
     padding: 10px 0;
@@ -683,18 +808,7 @@ textarea {
     width: 100%;
   }
   .email {
-    width: 70%;
+    width: 80%;
   }
 
-  @keyframes growdown {
-    0% {
-      transform: scaleY(0);
-    }
-    80% {
-      transform: scaleY(0.9);
-    }
-    100% {
-      transform: scaleY(1);
-    }
-  }
 }
