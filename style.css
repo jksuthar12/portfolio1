@@ -1,17 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 html {
   scroll-behavior: smooth;
   user-select: none;
 }
-
 body {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
   overflow-y: scroll;
 }
-
+.code {
+  font-family: 'Ephesis', cursive;
+  font-size: 40px;
+  color: #645e5e;
+}
 .first {
   height: 100vh;
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -50,7 +54,6 @@ body {
   font-weight: 100;
   margin: 0px;
   font-size: larger;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: relative;
   top: 20px;
 }
@@ -141,7 +144,6 @@ body {
 .para{
   margin: 0;
   width: 100%;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
  
 }
 #up {
@@ -269,6 +271,7 @@ li:hover {
 .heading {
   position: absolute;
   left: 50%;
+  width: max-content;
   top: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -321,7 +324,7 @@ li:hover {
   padding: 10px;
   border-radius: inherit;
   box-sizing: border-box;
-  background-color: tomato;
+  background-color:  #00ABE3;;
 }
 .edu p {
   letter-spacing: 1px;
@@ -384,7 +387,6 @@ li:hover {
 }
 .phead p {
   margin: 0;
- font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  font-size: 25px;
 }
 .pcontent {
@@ -424,9 +426,6 @@ li:hover {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.pcontent p {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 .phead {
   background-color: tomato;
   color: white;
@@ -455,26 +454,30 @@ button:hover {
   color: white;
 }
 .contact {
-  height: 500px;
+  background-color: lightblue;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.contact-content {
   width: 100%;
-
-  padding-top: 30px;
-  background-color: #d3d3d3;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center
 }
 .email {
-  width: 50%;
-  padding: 40px;
-  float: left;
-}
-.social {
-  padding: 40px;
-  text-align: center;
-  margin-top: 20px;
+  width: 30%;
 }
 .input {
+  margin-bottom: 15px;
   position: relative;
-  margin-top: 20px;
-  box-sizing: border-box;
+}
+.input:last-child {
+  margin: 0;
+}
+.social {
+  width: 30%;
 }
 
 textarea:focus {
@@ -542,31 +545,34 @@ input:focus {
   background-color: transparent;
 }
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
+  font-size: 20px ;
+  padding: 10px;
   border-radius: 50%;
-  margin: 10px;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 7px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  box-shadow: 0 0 7px -1px black;
 }
 .fa-linkedin {
-  background: #007bb5;
+  background: #707374;
   color: white;
 }
 .fa:hover {
   opacity: 0.7;
 }
 .fa-instagram {
-  background: #125688;
+  background: #bc1888;
   color: white;
 }
 .fa-skype {
-  background: #00aff0;
+  background: #00ABE3;
   color: white;
 }
 .fa-github {
-  background-color: black;
+  background: #000000;
   color: white;
 }
 .faa {
@@ -688,7 +694,7 @@ input:focus {
     z-index: 6;
   }
   .edu:hover::before {
-    background-color: tomato;
+    background-color:  #00ABE3;;
     
   }
   .edu:nth-child(odd) {
@@ -724,7 +730,10 @@ input:focus {
   }
 }
 @media screen and (max-width: 690px) {
-  
+  .contact-content {
+    display: block;
+    margin-bottom: 30px;
+  }
    .allproject {
      display: block;
    }
@@ -746,8 +755,11 @@ input:focus {
     margin: 20px;
   }
   .email {
-    float: none;
-    margin: auto;
+    width: 100%;
+    margin: 20px auto;
+  }
+  .social {
+    width: 100%;
   }
   #menu {
     width: 30px;
@@ -790,9 +802,7 @@ input:focus {
   .fa {
     margin: 2px;
   }
-  .contact {
-    height: auto;
-  }
+  
   li {
     width: 100%;
     padding: 10px 0;
