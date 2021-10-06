@@ -5,154 +5,138 @@
   <title>JK</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="style-mobile.css" type="text/css">
 </head>
 
 <body onload="channge()" onscroll="channge()">
-   <div  id="second">
-    <nav id="nav">
-      <div class="dropdown" onclick="drop(e)" >
-        <div id="menu" >
-          <div id="firstline"></div>
-          <div id="secondline"></div>
-          <div id="thirdline"></div>
-        </div>
-        <div class="dropdown-content" id="dropdown">
-          <ul>
-            <li id="h" onclick="fo('main')">Home</li>
-            <li id="e" onclick="fo('education')">Education</li>
-            <li id="s" onclick="fo('skills')">Skills</li>
-            <li id="p" onclick="fo('projects')">Projects</li>
-            <li id="c" onclick="fo('contact')">Contact</li>
-          </ul>
-        </div>
+  <nav>
+    <div class="dropdown" onclick="drop(e)">
+      <div id="menu">
+        <div id="firstline"></div>
+        <div id="secondline"></div>
+        <div id="thirdline"></div>
       </div>
-     <div class="heading">
-       <img src="other/profile.jpg" id="image" class="image"/>
+        <ul class="dropdown-content">
+          <li id="h" onclick="fo('Home')">Home</li>
+          <li id="e" onclick="fo('education')">Education</li>
+          <li id="s" onclick="fo('skills')">Skills</li>
+          <li id="p" onclick="fo('projects')">Projects</li>
+          <li id="c" onclick="fo('contact')">Contact</li>
+        </ul>
+    </div>
+    <div class="heading">
+      <img src="other/profile.jpg" id="image" class="image" />
       <h3 id="l" style=" font-family: 'Ephesis', cursive; font-size: 30px; letter-spacing: 2px;">Jitendra Suthar</h3>
-     </div>
-    </nav>
-    <div class="main" id="main">
-      <div class="imgg">
-        <img id="imgi" src="other/profile.jpg" />
-        
-        <div class="about">
-          <span class="code">&lt about &gt</span>
-          <p>Hello , I am jitendra suthar. Currently i am persuing my B.Tech Degree from NIT Bhopal.
-            i am Currently in my pre-final year.i have some experience in android and web development.
-            i also do competitive programming. That's all about me and <br><strong>Thank you for visiting my
-              Portfolio.</strong>
+    </div>
+  </nav>
+  <div class="about" id="about">
+    <img id="profile-image" src="other/profile.jpg" />
+    <p> <span class="code">&lt about &gt</span><br>
+      Hello , I am jitendra suthar. Currently I am persuing my B.Tech Degree from NIT Bhopal.
+      I am Currently in my final year.I have some experience in android and web development.
+      I also do competitive programming. That's all about me and <br><strong>Thank you for visiting my
+        Portfolio.</strong><br>
+      <span class="code">&lt /about &gt</span>
+    </p>
+
+  </div>
+  <div class="education" id="education">
+    <h3 style="letter-spacing: 3px;"><span class="code">&lth1&gt</span> Education <span class="code">&lt/h1&gt</span>
+    </h3>
+    <div class="education-container">
+      <div class="edu">
+          <p class="edu-content"><strong>Bachelor of Technology (B.Tech), Computer Science & Engineering</strong>
+            <br><br>NIT BHOPAL 2018 - 2022<br>CGPA : 7.05
           </p>
-          <span class="code">&lt /about &gt</span>
-        </div>
-      
       </div>
-      <div class="education" id="education" >
-        <h3 style="letter-spacing: 3px;"><span class="code">&lth1&gt</span> Education <span class="code">&lt/h1&gt</span></h3>
-     <div class="educ">
-          <div class="edu">
-            <div class="edu-content">
-              <p><strong>Bachelor of Technology (B.Tech), Computer Science & Engineering</strong>
-                <br><br>NIT BHOPAL 2018 - 2022<br>CGPA : 7.05
-              </p>
-            </div>
-          </div>
-          <div class="edu">
-           <div class="edu-content">
-            <p><strong>XII( Senior Secondary), Science</strong>
-              <br> <br> RBSE BOARD 2016
-              <br>PERCENTAGE : 89.20
-            </p>
-           </div>
-          </div>
-          <div class="edu">
-           <div class="edu-content">
-            <p><strong>X(Secondary)</strong>
-              <br> <br>RBSE BOARD 2014
-              <br> PERCENTAGE : 83.00
-            </p>
-           </div>
-          </div>
-        </div> 
+      <div class="edu">
+          <p  class="edu-content"><strong>XII( Senior Secondary), Science</strong>
+            <br> <br> RBSE BOARD 2016
+            <br>PERCENTAGE : 89.20
+          </p>
+         
       </div>
-      <div class="projects" id="projects">
-        <h3 style="letter-spacing: 3px;"> <span class="code">&lth1&gt</span> Projects <span class="code">&lt/h1&gt</span>
-        </h3>
-  
-       <div class="allproject">
-        <div class="project">
-         <div class="phead" style="background-color: gold;"> <p>Papersort Application</p></div>
-        <div class="pcontent">
-        <div class="pdetail">
-          <p >A full-fledge android application that allow college student to
+      <div class="edu">
+          <p class="edu-content"><strong>X(Secondary)</strong>
+            <br> <br>RBSE BOARD 2014
+            <br> PERCENTAGE : 83.00
+          </p>
+      </div>
+    </div>
+  </div>
+  <div class="projects" id="projects">
+    <h3 style="letter-spacing: 3px;"> <span class="code">&lth1&gt</span> Projects <span class="code">&lt/h1&gt</span>
+    </h3>
+
+    <div class="allproject">
+      <div class="project">
+        <h3 class="project-title">PaperSort Application</h3>
+        <div class="project-content">
+          <p>A full-fledge android application that allow college student to
             download previous year papers and relevant study materials.</p>
-          <p class="skills"> <i class="devicon-android-plain colored"></i> <i class="devicon-firebase-plain colored"></i></p>
+          <p><i class="devicon-android-plain colored"></i> <i class="devicon-firebase-plain colored"></i></p>
+          <button onclick="location.href='./papersort.html';" id="pbutton1">PaperSort </button>
         </div>
-         <div class="pbutton" >
-          <button onclick="location.href='./papersort.html';" id = "pbutton1" >PaperSort </button>
-         </div>
-        </div>
-        </div>
-        <div class="project">
-         <div class="phead" style="background-color: black;" ><p>MyBasta Application</p></div>
-        <div class="pcontent">
-         <div class="pdetail">
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">MyBasta Application</h3>
+        <div class="project-content">
           <p>In this android application professor can give assignment and notes to student.students submit their
             assignment. and professors get the
             submitted assignment of students and can give the marks.</p>
-          <p  class="skills"> <i class="devicon-android-plain colored"></i> <i class="devicon-mysql-plain colored"></i></i><i class="devicon-php-plain colored"></i></p>
-         </div>
-         <div class="pbutton"> <button onclick="location.href='./mybasta.html';" id="pbutton2">MyBasta</button></div>
+          <p class="skills"> <i class="devicon-android-plain colored"></i><i class="devicon-mysql-plain colored"></i><i
+              class="devicon-php-plain colored"></i></p>
+          <button onclick="location.href='./mybasta.html';" id="pbutton2">MyBasta</button>
         </div>
-        </div>
-        <div class="project">
-        <div class="phead" style="background-color:royalblue;">  <p>TimeTable Application</p></div>
-        <div class="pcontent">
-        <div class="pdetail">
+      </div>
+      <div class="project">
+        <h3 class="project-title">Time Table Application</h3>
+        <div class="project-content">
           <p>An android application from any college student can see their time table and can check which class is going
             on in other class room.</p>
-          <p  class="skills"> <i class="devicon-android-plain colored"></i> <i class="devicon-mysql-plain colored"></i></i><i class="devicon-php-plain colored"></i></p>
-        </div>
-         <div class="pbutton">
+          <p class="skills"> <i class="devicon-android-plain colored"></i> <i
+              class="devicon-mysql-plain colored"></i></i><i class="devicon-php-plain colored"></i></p>
           <button onclick="location.href='./timetable.html';" id="pbutton3">Time Table</button>
-         </div>
         </div>
-        </div>
-       </div>
-      </div>
-      <div class="contact" id="contact">
-        <h3 style="letter-spacing: 3px; margin: 0;"> <span class="code">&lth1&gt</span> Contact <span class="code">&lt/h1&gt</span>
-        </h3>
-       <div class="contact-content">
-        <div class="social">
-          <a href="#" target="__blank" class="fa fa-skype fa-2x"></a>
-          <a href="https://www.instagram.com/__j_k____/" target="__blank" class="fa fa-instagram fa-2x"></a>
-          <a href="https://www.linkedin.com/in/jitendra-suthar-b82044199" target="__blank" class="fa fa-linkedin fa-2x"></a>
-          <a href="https://github.com/jksuthar12" target="__blank" class="fa fa-github fa-2x"></a>
-        </div>
-          <div class="email">
-            <div class="input"><input type="text" placeholder="Name"  />
-            <span class="input-highlight"></span>
-            </div>
-            <div class="input"><input type="email" placeholder="Email" />
-              <span class="input-highlight"></span>
-            </div>
-            <div class="input"><textarea type="text" placeholder="Your message...." ></textarea>
-              <span class="input-highlight" style="height: 3px;"></span>
-            </div>
-           <div class="submit-btn">
-            <button id="send">SEND</button>
-            <span></span>
-           </div>
-        </div>
-        
-       </div>
       </div>
     </div>
-   </div>
+  </div>
+  <div class="contact" id="contact">
+    <h3 style="letter-spacing: 3px; margin: 0;"> <span class="code">&lth1&gt</span> Contact <span
+        class="code">&lt/h1&gt</span>
+    </h3>
+    <div class="contact-content">
+      <div class="social">
+        <a href="#" target="__blank" class="fa fa-skype fa-2x"></a>
+        <a href="https://www.instagram.com/__j_k____/" target="__blank" class="fa fa-instagram fa-2x"></a>
+        <a href="https://www.linkedin.com/in/jitendra-suthar-b82044199" target="__blank"
+          class="fa fa-linkedin fa-2x"></a>
+        <a href="https://github.com/jksuthar12" target="__blank" class="fa fa-github fa-2x"></a>
+      </div>
+      <div class="email">
+        <div class="input"><input type="text" placeholder="Name" />
+          <span class="input-highlight"></span>
+        </div>
+        <div class="input"><input type="email" placeholder="Email" />
+          <span class="input-highlight"></span>
+        </div>
+        <div class="input"><textarea type="text" placeholder="Your message...."></textarea>
+          <span class="input-highlight" style="height: 3px;"></span>
+        </div>
+        <div class="submit-btn">
+          <button id="send">SEND</button>
+          <span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script src="index.js"></script>
   <script src="canvas.js"></script>
 </body>

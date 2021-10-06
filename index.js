@@ -1,13 +1,12 @@
 window.onkeydown = up;
-var i = 0;
-var text = "Jitendra Suthar";
+
 var dro = 0;
 
 function drop() {
-  const dropdown = document.getElementById('dropdown');
+  const dropdown = document.querySelector(".dropdown-content");
   const secondLine = document.getElementById('secondline');
   if(dro == 0) {
-   dropdown.style.maxHeight = "1000px";
+   dropdown.style.maxHeight = "500px";
   secondLine.style.transform="translateX(-10px)";
   dro++;
   }

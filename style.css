@@ -4,241 +4,178 @@ html {
   scroll-behavior: smooth;
   user-select: none;
 }
-body {
-  font-family: 'Open Sans', sans-serif;;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+ user-select: none;
+}
+body {
+  padding-top: 45px;
+}
+nav {
   width: 100%;
-  overflow-y: scroll;
+  height: 45px;
+  background-color: white ;
+  text-align: center;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.dropdown {
+  float: left;
+} 
+#menu {
+  display: none;
+}
+.dropdown-content {
+  list-style: none;
+}
+.dropdown-content li {
+  float: left;
+  cursor: pointer;
+  padding: 10px;
+  color: black;
+  margin: 0 10px;
+}
+.about {
+  height: auto;
+  width: 100%;
+ background: rgba(76, 175, 80, 0.3);
+ text-align: center;
+ padding: 20px;
+}
+#profile-image {
+  border-radius: 50%;
+  width: 200px;
+  border: 7px blueviolet solid;
+  height: 200px;
+  object-fit: fill;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.about p {
+  padding: 20px;
+  max-width: 450px;
+  letter-spacing: 2px;
+  margin: auto;
+  line-height: 1.5em;
+}
+.education {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+.edu {
+  margin: 20px 0;
+  border-radius: 5px;
+  background-color: black;
+  text-align: center;
+}
+
+.edu-content {
+  min-height: 150px;
+  box-shadow: 0 0 8px 0 #ddd;
+  color: white;
+  padding: 10px;
+  vertical-align: middle;
+  border-radius: inherit;
+  background-color:  #00ABE3;
+}
+.projects {
+  width: 100%;
+  text-align: center;
+}
+.project {
+  height: auto;
+   flex: 1;
+  margin: 5px 20px;
+  box-shadow: 0 0 8px 0 #ddd;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.project-title {
+  background-color: blue;
+  box-sizing: border-box;
+  padding: 30px;
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+  color: white;
+}
+.project:nth-child(1) .project-title {
+ background-color: gold;
+}
+.project:nth-child(2) .project-title {
+ background-color: black;
+}
+.project:nth-child(3) .project-title {
+ background-color: royalblue;
+}
+.project:hover {
+ box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project-content {
+  text-align: left;
+  padding: 20px;
+  font-size:40px;
+}
+.project-content p:first-child {
+  text-align: center;
+ letter-spacing: 2px;
+ line-height: 1.5em;
+ font-size: 15px;
+ margin-bottom: 10px;
+}
+.project-content button {
+  border: 1px #ddd solid;
+  padding: 10px 20px;
+  color: grey;
+  font-weight: 300;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+.contact {
+  background-color: lightblue;
+  padding: 30px 0;
+  text-align: center;
+}
+.social {
+  width: 30%;
+}
+.fa {
+  font-size: 20px ;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  text-align: center ;
+  margin: 0 7px;
+  border: 2px solid white;
+  box-shadow: 0 0 7px -1px black;
+}
+.fa-linkedin {
+  background: #707374;
+  color: white;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-instagram {
+  background: #bc1888;
+  color: white;
+}
+.fa-skype {
+  background: #00ABE3;
+  color: white;
+}
+.fa-github {
+  background: #000000;
+  color: white;
 }
 .code {
   font-family: 'Ephesis', cursive;
   font-size: 40px;
   color: #645e5e;
-}
-.first {
-  height: 100vh;
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background: url('background.jpg');
-  background-size: cover;
-  position: relative;
-  transition: all 2s ease;
-}
-
-#social {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-
-}
-#social ul {
-  display: flex;
-  margin: 0px;
-}
-#social a {
-   all: none;
-   padding: 0;
-   background-color: none;
-   width: 0;
-   margin-left: 60px;
-   margin-top: 0px;
-  font-size: x-large;
-  transition: color 0.5s;
-}
-#social a:hover {
-  color: black;
-}
-#name {
-  text-align: center;
-  color: white;
-  font-weight: 100;
-  margin: 0px;
-  font-size: larger;
-  position: relative;
-  top: 20px;
-}
-.ta {
-  height: 0vh;
-  
-}
-#second {
-  
-  transition: all 2s;
-}
-.fprojects {
-  position: absolute;
-  top: 50%;
-  width: 300px;
-  transform: translateY(-50%);
-  flex-wrap: wrap;
-  align-items: center;
-  display: none;
-}
-.fproject {
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
-  margin-bottom: 10px;
-   transform: all 0.5s;
-}
-.fprojectanimation {
-
-  animation-name: fproject;
-  animation-duration: 0.5s;
-}
-@keyframes fproject {
-  from {
-    margin-left: 0px;
-  }
-  to {
-    margin-left: 50px;
-  }
-}
-.fproject p{
-  height: 100%;
-  color: white;
-  margin-left: 10px;
-  font-size: 25px;
-}
-.details {
-  height: 200px;
- top:  50%;
- 
- transform: translateY(-50%);
-  position: absolute;
-  display: flex;
-  align-items: center;
-  animation-name: details;
-  animation-duration: 1s;
-  left: 50px;
-}
-#de {
-  width: 3px;
-  background-color: white;
-  animation-name: de;
-  height: 200px;
-  animation-delay: 1s;
-  animation-duration: 1s;
-  position: relative;
-  animation-fill-mode: backwards;
-}
-#de::after {
-  
-  
-}
-.card {
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-  display: flex;
-  align-items: center;
-}
-
-#card1 , #card2 {
- backface-visibility: hidden;
-  box-sizing: border-box;
-}
-#card2 {
-  transform: rotateY(180deg);
-
-}
-.para{
-  margin: 0;
-  width: 100%;
- 
-}
-#up {
-  width: 50px;
-  height: 60px;
-  background-color: black;
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  clip-path: polygon(50% 92%,100% 67%,100% 75%,50% 100%,0% 75%,0% 68%);
-  cursor: pointer;
-  background-color: white;
-  animation: up 1s alternate infinite;
-  
-}
-@keyframes goup {
-  from{
-    bottom: 0%;
-  }
-  to{
-    bottom: 100%;
-  }
-}
-@keyframes up {
-  from{
-    bottom: 20px;
-  }
-  to {
-   bottom: 10px;
-  }
-}
-@keyframes details {
-  from{
-     left: -200px;
-
-  }
-  to {
-left: 50px;
-  }
-}
-@keyframes de {
-  from {
-     height: 0px;
- 
-  }
-  to {
-    height: 200px;
- 
-  }
-}
-.details p {
-  height: 100%;
-  
-  color: white;
-  margin-left: 10px;
-  font-size: 25px;
-}
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-nav {
-  width: 100%;
-  height: 40px;
-  background-color: white ;
-  text-align: center;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  position: fixed;
-  z-index: 100;
-  top: 0%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.dropdown-content {
-  float: left;
-}
-.dropdown-content ul {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  list-style-type: none;
-}
-.dropdown-content li {
-  float: left;
-  padding: 10px 20px;
-  text-align: center;
-  font-weight: 500;
-  cursor: pointer;
 }
 li:hover {
   color: blue;
@@ -249,25 +186,7 @@ li:hover {
   margin-top: 30px;
   text-align: center;
 }
-.imgg {
-  background: rgba(76, 175, 80, 0.3);
-  height: auto;
-}
-.about {
-  padding-bottom: 30px;
-  animation: fade 3s linear forwards;
-}
-#imgi {
-  border-radius: 50%;
-  width: 200px;
-  border: 7px blueviolet solid;
-  height: 200px;
-  object-fit: fill;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  animation: fade 3s linear forwards;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
 .heading {
   position: absolute;
   left: 50%;
@@ -279,8 +198,6 @@ li:hover {
 }
 .image {
   border-radius: 50%;
- 
-  
   height: 0;
   width: 0;
   object-fit: fill;
@@ -295,39 +212,9 @@ li:hover {
   border: 3px blueviolet solid;
 }
 
-.about p {
-  width: 400px;
-  letter-spacing: 3px;
-  margin: 0 auto;
-}
-.education {
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  box-sizing: border-box;
-}
-.colored {
-  font-size: 40px;
-}
-.skills {
-
-  position: absolute;
-  left: 20px;
-  bottom: 60px;
-}
-
-.edu-content {
-  height: max-content;
-  min-height: 150px;
-  box-shadow: 0 0 8px 0 #ddd;
-  color: white;
-  padding: 10px;
-  border-radius: inherit;
-  box-sizing: border-box;
-  background-color:  #00ABE3;;
-}
 .edu p {
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  line-height: 1.5em;
   text-align: center;
 }
 #haad {
@@ -367,40 +254,10 @@ li:hover {
   color: blue;
   cursor: pointer;
 }
-.projects {
-  width: 100%;
-  padding-top: 30px;
- 
-}
+
 .allproject {
   display: flex;
   justify-content: center;
-}
-.project {
-  height: 350px;
-   flex: 1;
-  margin: 5px 20px;
-  position: relative;
-  box-shadow: 0 0 8px 0 #ddd;
-  border-radius: 5px;
-  margin-bottom: 30px;
-}
-.phead p {
-  margin: 0;
- font-size: 25px;
-}
-.pcontent {
-  height: 70%;
-  text-align: center;
-  padding: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-.pbutton {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
 }
 #pbutton1:hover {
   background-color: gold;
@@ -414,30 +271,8 @@ li:hover {
   background-color: royalblue;
   color: white;
 }
-.pbutton button {
-  border: 1px #ddd solid;
-  padding: 10px 20px;
-  color: grey;
-  font-weight: 300;
-  transition: all 0.3s;
-}
-.pdetail {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-.phead {
-  background-color: tomato;
-  color: white;
-  margin: 0;
-  padding-top: 20px;
-  box-sizing: border-box;
-  height: 30%;
-  border-radius: 5px 5px 0 0;
-}
-.project:hover {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
+
 button {
   border: none;
   outline: none;
@@ -453,11 +288,7 @@ button:hover {
   background-color: blue;
   color: white;
 }
-.contact {
-  background-color: lightblue;
-  padding: 10px 0;
-  box-sizing: border-box;
-}
+
 .contact-content {
   width: 100%;
   padding: 30px 40px;
@@ -475,9 +306,6 @@ button:hover {
 }
 .input:last-child {
   margin: 0;
-}
-.social {
-  width: 30%;
 }
 
 textarea:focus {
@@ -502,7 +330,7 @@ input:focus {
   height: 2px;
   width: 0%;
   position: absolute;
-  background-color: blue;
+  background-color: dodgerblue;
   bottom: 0;
   left: 0;
   transition: width 300ms ease-in;
@@ -521,7 +349,7 @@ input:focus {
    position: absolute;
    width: 0%;
    height: 100%;
-   background-color: blue;
+   background-color: dodgerblue;
    left: 0;
    bottom: 0;
    transition: all 0.5s ease;
@@ -530,10 +358,11 @@ input:focus {
 #send {
   height: 100%;
   width: 100%;
-  color: blue;
+  color: dodgerblue;
   padding: 0;
   border-radius: 0;
-  border: 2px solid blue;
+  font-size: 10px;
+  border: 2px solid dodgerblue;
   position: absolute;
   left: 0;
   letter-spacing: 2px;
@@ -544,106 +373,13 @@ input:focus {
   color: white;
   background-color: transparent;
 }
-.fa {
-  font-size: 20px ;
-  padding: 10px;
-  border-radius: 50%;
-  text-decoration: none;
-  text-align: center;
-  margin: 0 7px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  box-shadow: 0 0 7px -1px black;
-}
-.fa-linkedin {
-  background: #707374;
-  color: white;
-}
-.fa:hover {
-  opacity: 0.7;
-}
-.fa-instagram {
-  background: #bc1888;
-  color: white;
-}
-.fa-skype {
-  background: #00ABE3;
-  color: white;
-}
-.fa-github {
-  background: #000000;
-  color: white;
-}
-.faa {
-  margin: 0px;
-  padding: 0px;
-}
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
-.download{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    position: fixed;
-    z-index: 100;
-    background-color: blue;
-    right: 2%;
-    bottom: 2%;
-    display: none;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.flot{
-    position: absolute;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 
-}
-
-.bu{
-    position: fixed;
-    background-color: blue;
-    right: 2%;
-    bottom: 2%;
-    text-align: center;
-    cursor: pointer;
-    visibility: hidden;
-    border-radius: 150px;
-    z-index: 100;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.bu a{
-    padding: 15px 15px;
-    color: white;
-    display: block;
-    font-weight: bold;
-    text-decoration: none;
-}
-.edu {
-  margin: 20px 0;
-  border-radius: 5px;
-}
 
 @media screen and (min-width: 700px) {
-
-  .projects {
-    clear: both;
-  }
-  .education {
-    height: auto;
-  }
-  .educ {
+ 
+  
+  .education-container {
     width: 90%;
     display: inline-block;
     margin: 0 auto;
@@ -651,7 +387,7 @@ input:focus {
    position: relative;
    padding: 20px;
   }
-  .educ::after {
+  .education-container::after {
     content: "";
     position: absolute;
     width: 5px;
@@ -665,9 +401,7 @@ input:focus {
   .educationAnimation {
     animation: educationAnim 400ms forwards;
   }
-  .edu-content {
-    transform: translateX(-20px);
-  }
+  
   
   @keyframes educationAnim {
     from {
@@ -720,105 +454,4 @@ input:focus {
    transform: translate(-50%, -50%);
   }
   
-}
-@media screen and (max-width:590px){
-    #resume{
-      display: none;
-  }
-  .download{
-    display: block;
-  }
-}
-@media screen and (max-width: 690px) {
-  .contact-content {
-    display: block;
-    margin-bottom: 30px;
-  }
-   .allproject {
-     display: block;
-   }
-  .dropdown-content ul {
-    width: 100%;
-    padding: 0;
-    cursor: pointer;
-    z-index: 1;
-    list-style-type: none;
-  }
-  .dropdown-content li {
-    padding: 10px 0;
-  }
-  .dropdown {
-    float: left;
-   
-  } 
-  .edu {
-    margin: 20px;
-  }
-  .email {
-    width: 100%;
-    margin: 20px auto;
-  }
-  .social {
-    width: 100%;
-  }
-  #menu {
-    width: 30px;
-    margin-left: 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    position: relative;
-    pointer-events: none;
-  }
-  #menu div {
-    height: 2px;
-    width: 100%;
-    margin: 6px 0;
-    background-color: rgb(10, 8, 8);
-  }
-  #firstline, #thirdline {
-    transform-origin: left;
-  }
-  
-  #secondline {
-   
-    transform: translateX(10px);
-    transition: transform 300ms ease-in;
-  
-  }
-  .dropdown-content {
-    position: absolute;
-    width: 100%;
-    max-height: 0;
-    z-index: 1;
-    transition: max-height 300ms ease-in;
-    overflow: hidden;
-    top: 100%;
-    background-color: white;
-    -webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
-     
-  }
-  .fa {
-    margin: 2px;
-  }
-  
-  li {
-    width: 100%;
-    padding: 10px 0;
-  }
-  li:hover {
-    background-color: #ddd;
-  }
-  .about {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .about p {
-    width: 100%;
-  }
-  .email {
-    width: 80%;
-  }
-
 }
