@@ -62,16 +62,11 @@ function animationInEducation() {
 }
 function channge() {
   var x = window.scrollY;
-  // document.getElementById('l').innerHTML = x;
-  var image = document.getElementById('image')
-  if(x >= 210) {
-  
-   image.classList.add('trans');
+  if(x > 10) {
+    document.querySelector(".downarrow").style.visibility = "visible";
   }
-  else if(x < 210) {
-    image.classList.remove('trans');
-    image.classList.add('trass');
-
+  else {
+    document.querySelector(".downarrow").style.visibility = "hidden";
   }
   animationInEducation();
   if (x == 0) {
@@ -155,4 +150,19 @@ inp.forEach(ele=>{
       this.nextElementSibling.style.width = "0%";
 });
 
+})
+document.querySelector(".downarrow").addEventListener('click', function() {
+  window.scroll(0, 0);
+});
+document.querySelector("#sendMessage").addEventListener('submit', function(e) {
+  e.preventDefault();
+  const xhttp = new XMLHttpRequest();
+  const submitBtn = document.querySelector("#send");
+  submitBtn.innerHTML = "...SENDING";
+   xhttp.onload = function() {
+       console.log('fsfs');
+       submitBtn.innerHTML = "SENT";
+   };
+   xhttp.open("POST", "./sendMessage.php");
+   xhttp.send();
 })

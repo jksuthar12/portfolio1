@@ -4,12 +4,41 @@ html {
   scroll-behavior: smooth;
   user-select: none;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
  user-select: none;
+}
+.downarrow {
+ visibility: hidden;
+  position: fixed;
+  bottom: 10px;
+  -webkit-tap-highlight-color: transparent;
+  right: 10px;
+  z-index: 111;
+  cursor: pointer;
+  transition: all 1s;
+animation: downArrow 1s alternate infinite ease-in;
+  background-color: deeppink;
+  width: 40px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  border: none !important;
+}
+.downarrow:hover {
+  opacity: 1 !important;
+}
+@keyframes downArrow {
+  from {
+   transform: translateY(0);
+  }
+  to {
+      transform: translateY(-30px);
+  }
 }
 body {
   padding-top: 45px;
